@@ -1,0 +1,299 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println("employee data");
+		System.out.println("emp id=100");
+		System.out.println("emp name=nandhini");
+		System.out.println("branch=HR");
+		System.out.println("salary=50000");
+		System.out.println("experience=5");
+
+	}
+}
+
+
+1.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println("hello,java!");
+		System.out.println("welcome to programmming");
+		System.out.println("my journey starts today");
+
+	}
+}
+
+
+2.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println("college=ABC engineering college");
+		System.out.println("department=computer science");
+		System.out.println("course=java programming");
+
+	}
+}
+
+
+3.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.print("java is simple");
+		System.out.print("java is powerful");
+
+	}
+}
+
+
+5.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println("students profile");
+		System.out.println("student name=nandhini");
+		System.out.println("student age=20");
+		System.out.println("grade=A");
+		System.out.println("placement status=good");
+
+	}
+}
+
+
+6.import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Scanner;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		 System.out.println("Enter population:");
+        int population = sc.nextInt();
+
+        System.out.println("Enter product price:");
+        float price = sc.nextFloat();
+
+        System.out.println("Enter blood group symbol:");
+        char bloodGroup = sc.next(A).charAt();
+
+        System.out.println("Enter account verified:");
+        boolean verified = sc.nextBoolean();
+
+        System.out.println("Enter employee name:");
+        String name = sc.next();
+
+        System.out.println("Population: " + population);
+        System.out.println("Product price: " + price);
+        System.out.println("Blood group symbol: " + bloodGroup);
+        System.out.println("Account verified: " + verified);
+        System.out.println("Employee name: " + name);
+
+		
+
+	}
+}
+
+
+7.import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Scanner;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		 System.out.println("Enter product id :");
+        int id = sc.nextInt();
+
+        System.out.println("Enter product price:");
+        float price = sc.nextFloat();
+
+        System.out.println("Enter availability:");
+        boolean availability = sc.nextboolean();
+
+        System.out.println("Enter Product name:");
+        String name = sc.next();
+
+        System.out.println("Product id");
+        System.out.println("Product name");
+        System.out.println("product availability");
+        System.out.println("product price");
+
+		
+
+	}
+}
+
+
+9.import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Scanner;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		 System.out.println("Enter student roll no:");
+        int id = sc.nextInt();
+
+        System.out.println("Enter student precentage:");
+        float percentage = sc.nextFloat();
+
+        System.out.println("Enter student department:");
+        char department = sc.next().charAt(0);
+
+        System.out.println("Enter student name:");
+        String name = sc.next();
+
+        System.out.println("student rollno");
+        System.out.println("student name");
+        System.out.println("student percentage");
+        System.out.println("student department");
+
+		
+
+	}
+}
+
+
+10.import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Scanner;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		 System.out.println("Enter ticket count:");
+        int id = sc.nextInt();
+
+        System.out.println("Enter ticket price:");
+        float price = sc.nextFloat();
+
+        System.out.println("Enter movie name:");
+        char movie name = sc.next().charAt(0);
+
+        System.out.println("Enter customer name:");
+        String name = sc.next();
+
+        System.out.println("customer name");
+        System.out.println("ticket price");
+        System.out.println("ticket count");
+        System.out.println("movie name");
+
+		
+
+	}
+}
+
+11.import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Scanner;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		 System.out.println("Enter customer pincode:");
+        int id = sc.nextInt();
+
+        System.out.println("Enter availability:");
+        boolean availability = sc.nextboolean();
+
+        System.out.println("Enter customer address name:");
+        char customer address = sc.next().charAt(0);
+
+        System.out.println("Enter customer name:");
+        String name = sc.next();
+
+        System.out.println("customer name");
+        System.out.println("customer pincode");
+        System.out.println("customer address");
+        System.out.println("product availability");
+
+		
+
+	}
+}
+
+
+12.import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Scanner;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		 System.out.println("Enter patient id:");
+        int id = sc.nextInt();
+
+        System.out.println("Enter admitted status:");
+        boolean admitted status = sc.nextboolean();
+
+        System.out.println("Enter patient age:");
+        int age = sc.nextInt();
+
+        System.out.println("Enter patient full name:");
+        String name = sc.next();
+
+        System.out.println("Enter the body temperature:");
+        float temperature = sc.nextFloat();
+
+        System.out.println("patient name");
+        System.out.println("patient id");
+        System.out.println("admitted status");
+        System.out.println("patient age");
+        System.out.println("body temperature");
+
+		
+
+	}
+}
+
+4.import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Scanner;
+
+class Codechef {
+    public static void main(String[] args) {
+        System.out.println("Name\t:\tArun\nCourse\t:\tJava\nLevel\t:\tBeginner");
+    }
+}
+
+
+
+
+
+
+
