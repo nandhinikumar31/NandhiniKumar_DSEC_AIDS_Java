@@ -1,0 +1,127 @@
+6.import java.util.scanner;
+
+public class Main {
+    public static void main (String[] args) {
+        scanner sc = new scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+    
+        int largest = (a >= b && a >= c)? a:
+                      (b >= a && b >= c)? b:c;
+                  
+        System.out.println(largest);
+    }
+}
+
+1.class Main {
+    public static void main(String[] args) {
+        int a = 7;
+
+        String result = (a % 2 == 0) ? "Even" : "Odd";
+
+        System.out.println("Result: " + result);
+    }
+}
+
+2.class Main {
+    public static void main(String[] args) {
+        int a = 80;
+        int b = 45;
+
+        String result = (a == b) ? "Equal":
+                  (a > b) ?"a" : "b";
+
+        System.out.println("Result: " + result);
+    }
+}
+
+5.class Main {
+    public static void main(String[] args) {
+        int a = 15;
+        
+        String result = (a % 3 == 0 && a % 5 == 0) ? "divisible by both": "not dividible by both";
+                  
+
+        System.out.println("Result: " + result);
+    }
+}
+
+
+3.import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the integer:");
+        int number = scanner.nextInt();
+        
+        String result = (number > 0)
+                ? "positive"
+                : (number < 0 ? "negative" : "zero");
+        
+        System.out.println(result);
+        
+        scanner.close();
+    }
+}
+
+
+7.class Main {
+    public static void main (String[] args) {
+    int a = -248;
+    
+    String result = (Math.abs(a) % 10) % 2 == 0 ? "Yes" : "No";
+    
+        System.out.println("Result:" + result);
+    }
+}
+
+9.class Main {
+    public static void main (String[] args) {
+    int amount = 1200;
+    boolean premium = false;
+    
+    String result = (amount >= 1000 || premium)
+         ? "free delivery"
+         : "delivery charges apply";
+    
+        System.out.println("Result:" + result);
+    }
+}
+
+10.class Main {
+    public static void main (String[] args) {
+    double amount = 2500;
+    
+    double finalamount = (amount >= 2000)
+       ? amount - (amount * 0.10)
+       : amount;
+    
+        System.out.println("Finalamount:" + finalamount);
+    }
+}
+
+4.class Main {
+    public static void main (String[] args) {
+    int a = 20;
+    
+    String result = (a >= 18) ? "eligible for vote" : "not eligible for vote";
+    
+        System.out.println(result);
+    }
+}
+
+8.class Main {
+    public static void main (String[] args) {
+    int a = 50;
+    
+    String result = (a >= 35) ? "pass in exam" : "fail in exam";
+    
+        System.out.println(result);
+    }
+}
+
+
+
