@@ -1,0 +1,775 @@
+1.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int a[] = {40,10,30,20};
+		for(int i = 0;i < a.length-1;i++) {
+		    for(int j = 0;j < a.length-1-i;j++) {
+		        if(a[j] > a[j + 1]) {
+		            int temp = a[j];
+		            a[j] = a[j + 1];
+		            a[j + 1] = temp;
+		        }
+		    }
+		}
+		for(int i = 0;i < a.length;i++)
+		System.out.print(a[i] + " ");
+
+	}
+}
+
+2.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int a[] = {40,10,30,20};
+		for(int i = 0;i < a.length-1;i++) {
+		    int min = i;
+		    for(int j = i + 1;j < a.length;j++) {
+		        if(a[j] < a[min]) {
+		            min = j;
+		        }
+		    }
+		    int temp = a[i];
+		    a[i] = a[min];
+		    a[min] = temp;
+		}
+		for(int i = 0;i < a.length;i++)
+		System.out.print(a[i] + " ");
+
+	}
+}
+
+3.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int a[] = {40,10,30,20};
+		for(int i = 1;i < a.length-1;i++) {
+		    int key = a[i];
+		    int j = i - 1;
+		    while(j >= 0 && a[j] > key) {
+		        a[j + 1] = a[j];
+		        j--;
+		    }
+		    a[j + 1] = key;
+		}
+		for(int i = 0;i < a.length;i++)
+		System.out.print(a[i] + " ");
+		
+
+	}
+}
+
+4.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	static void mergeSort(int a[],int left,int right) {
+	    if(left < right) {
+	        int mid = (left + right) / 2;
+	        mergeSort(a,left,mid);
+	        mergeSort(a,mid + 1,right);
+	        merge(a,left,mid,right);
+	    }
+	}
+	static void merge(int a[],int left,int mid,int right) {
+	    int temp[] = new int[right - left + 1];
+	    int i = left;
+	    int j = mid + 1;
+	    int k = 0;
+	    while(i <= mid && j <= right) {
+	        if(a[i] <= a[j]) {
+	            temp[k++] = a[i++];
+	        } else {
+	            temp[k++] = a[j++];
+	        }
+	    }
+	    while(i <= mid) {
+	        temp[k++] = a[i++];
+	    }
+	    while(j <= right) {
+	        temp[k++] = a[j++];
+	    }
+	    for(i = left;i <= right;i++) {
+	        a[i] = temp[i - left];
+	    }
+	}
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    System.out.print("enter array size:");
+	    int n = sc.nextInt();
+	    int a[] = new int[n];
+	    System.out.println("enter array elements:");
+	    for(int i = 0;i < n;i++) {
+	        a[i] = sc.nextInt();
+	    }
+	    mergeSort(a,0,n - 1);
+	    System.out.println("sorted array:");
+	    for(int i = 0;i < n;i++) {
+	        System.out.print(a[i] + " ");
+	    }
+	}
+}
+5.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    int a[] [] = new int [2] [3];
+	    for(int i = 0;i < 2;i++) {
+	        for(int j = 0;j < 3;j++) {
+	            a[i] [j] = sc.nextInt();
+	        }
+	    }
+	    for(int i = 0;i < 2;i++) {
+	        for(int j = 0;j < 3;j++) {
+	            System.out.print(a[i] [j] + " ");
+	        }
+	        System.out.println();
+	    }
+	}
+}
+
+6.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    int a[] [] = new int [2] [2];
+	    int sum = 0;
+	    for(int i = 0;i < 2;i++) {
+	        for(int j = 0;j < 2;j++) {
+	            a[i] [j] = sc.nextInt();
+	            sum = sum + a[i] [j];
+	        }
+	    }
+	    
+	        System.out.println("sum: " + sum);
+	    
+	}
+}
+
+problems
+
+1.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    System.out.println("enter 5 elements:");
+	    int n = 5;
+	    int a[] = new int[n];
+	    
+	    for(int i = 0;i < n;i++) {
+	        a[i] = sc.nextInt();
+	    }
+	    
+	    int first = a[0];
+	    for(int i = 0;i < n - 1;i++) {
+	        a[i] = a[i + 1];
+	    }
+	    a[n - 1] = first;
+	    
+	    System.out.print("output: ");
+	    for(int i = 0;i < n;i++) {
+	        System.out.print(a[i] + " ");
+	    }
+	}
+}
+
+2.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    System.out.println("enter 5 elements:");
+	    int n = 5;
+	    int a[] = new int[n];
+	    
+	    for(int i = 0;i < n;i++) {
+	        a[i] = sc.nextInt();
+	    }
+	    
+	    int last = a[n - 1];
+	    for(int i = n - 1;i > 0;i--) {
+	        a[i] = a[i - 1];
+	    }
+	    a[0] = last;
+	    
+	    System.out.print("output: ");
+	    for(int i = 0;i < n;i++) {
+	        System.out.print(a[i] + " ");
+	    }
+	}
+}
+
+3.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    System.out.println("enter 5 elements:");
+	    int n = 5;
+	    int a[] = new int[n];
+	    
+	    for(int i = 0;i < n;i++) {
+	        a[i] = sc.nextInt();
+	    }
+	    
+	    int N = n + 1;
+	    int totalSum = N * (N + 1) / 2;
+	    
+	    int arraySum = 0;
+	    for(int i = 0;i < n;i++)  {
+	        arraySum += a[i];
+	    }
+	    int missing = totalSum - arraySum;
+	    
+	    System.out.println("Missing Number = " + missing);
+	}
+}
+
+4.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    System.out.println("enter 7 elements:");
+	    int n = 7;
+	    int a[] = new int[n];
+	    
+	    for(int i = 0;i < n;i++) {
+	        a[i] = sc.nextInt();
+	    }
+	    
+	    int unique = 0;
+	    for(int i = 0;i < n;i++) {
+	        unique = unique ^ a[i];
+	    }
+	    System.out.println("Unique element = " + unique);
+	}
+}
+
+5.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    System.out.println("enter 7 elements:");
+	    int n = 7;
+	    int a[] = new int[n];
+	    
+	    for(int i = 0;i < n;i++) {
+	        a[i] = sc.nextInt();
+	    }
+	    
+	    HashSet<Integer> seen = new HashSet<>();
+	    int firstRepeating = -1;
+	    
+	    for(int i = n - 1;i >= 0;i--) {
+	        if(seen.contains(a[i])) {
+	            firstRepeating = a[i];
+	        } else {
+	            seen.add(a[i]);
+	        }
+	    }
+	    if(firstRepeating != -1) {
+	        System.out.println("First Repeating Element = " + firstRepeating);
+	    } else {
+	        System.out.println("No repeating element");
+	    }
+	        
+	}
+}
+
+6.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    System.out.println("enter 7 elements:");
+	    int n = 7;
+	    int a[] = new int[n];
+	    
+	    for(int i = 0;i < n;i++) {
+	        a[i] = sc.nextInt();
+	    }
+	    
+	    HashMap<Integer , Integer> count = new HashMap<>();
+	    for(int i = 0;i < n;i++) {
+	        count.put(a[i], count.getOrDefault(a[i], 0) + 1);
+	    }
+	    int result = -1;
+	    for(int i = 0;i < n;i++) {
+	        if(count.get(a[i]) == 1) {
+	            result = a[i];
+	            break;
+	        }
+	    }
+	    if(result != -1) {
+	        System.out.println("First Non-Repeating Element = " + result);
+	    } else {
+	        System.out.println("No non-repeating element");
+	    }
+	        
+	}
+}
+
+7.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    System.out.println("enter 5 elements:");
+	    int n = 5;
+	    int a[] = new int[n];
+	    
+	    for(int i = 0;i < n;i++) {
+	        a[i] = sc.nextInt();
+	    }
+	    
+	    boolean isSorted = true;
+	    for(int i = 0;i < n - 1;i++) {
+	        if(a[i] > a[i + 1]) {
+	            isSorted = false;
+	            break;
+	        }
+	    }
+	    if(isSorted) {
+	        System.out.println("Array is Sorted");
+	    } else {
+	        System.out.println("Array is Not Sorted");
+	    }
+	    
+	        
+	}
+}
+
+8.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	
+	public  static void main(String[] args) {
+	    Scanner sc  = new Scanner(System.in);
+	    System.out.println("enter 5 elements:");
+	    int n = 5;
+	    int a[] = new int[n];
+	    
+	    for(int i = 0;i < n;i++) {
+	        a[i] = sc.nextInt();
+	    }
+	    
+	    int start = 0;
+	    int end = n - 1;
+	    while(start < end) {
+	        int temp = a[start];
+	        a[start] = a[end];
+	        a[end] = temp;
+	        
+	        start++;
+	        end--;
+	    }
+	    System.out.print("Output: ");
+	    for(int i = 0;i < n;i++) {
+	        System.out.print(a[i] + " ");
+	    }
+	}
+}
+9.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input full line ah edukkuthu
+        ArrayList<Integer> list = new ArrayList<>();
+        while(sc.hasNextInt()){
+            list.add(sc.nextInt());
+        }
+        
+        if(list.size() < 2){
+            System.out.println("Array should have at least 2 elements");
+            return;
+        }
+        
+        int[] arr = new int[list.size()];
+        for(int i=0; i<list.size(); i++) arr[i] = list.get(i);
+
+        int minElement = arr[0];
+        int maxDiff = arr[1] - arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            // ippovaraikkum max diff ah update pannu
+            if (arr[i] - minElement > maxDiff) {
+                maxDiff = arr[i] - minElement;
+            }
+            // min element ah update pannu
+            if (arr[i] < minElement) {
+                minElement = arr[i];
+            }
+        }
+
+        System.out.println("Maximum Difference = " + maxDiff);
+    }
+}
+10.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        while(sc.hasNextInt()){
+            list.add(sc.nextInt());
+        }
+        
+        if(list.isEmpty()) return;
+        
+        int[] arr = new int[list.size()];
+        for(int i=0; i<list.size(); i++) arr[i] = list.get(i);
+
+        // Leaders ah store panna
+        ArrayList<Integer> leaders = new ArrayList<>();
+        
+        int maxFromRight = arr[arr.length - 1];
+        leaders.add(maxFromRight);
+        
+        // Right la irunthu left porom - O(n)
+        for (int i = arr.length - 2; i >= 0; i--) {
+            if (arr[i] > maxFromRight) {
+                maxFromRight = arr[i];
+                leaders.add(maxFromRight);
+            }
+        }
+        
+        // Reverse pannanum because right la irunthu add pannom
+        Collections.reverse(leaders);
+        
+        // Output print
+        for (int i = 0; i < leaders.size(); i++) {
+            System.out.print(leaders.get(i));
+            if (i < leaders.size() - 1) System.out.print(" ");
+        }
+    }
+}
+
+11.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        while(sc.hasNextInt()){
+            list.add(sc.nextInt());
+        }
+        
+        if(list.isEmpty()) return;
+        
+        int[] arr = new int[list.size()];
+        for(int i=0; i<list.size(); i++) arr[i] = list.get(i);
+
+        int totalSum = 0;
+        for (int num : arr) totalSum += num;
+
+        int leftSum = 0;
+        int equilibriumIndex = -1;
+
+        for (int i = 0; i < arr.length; i++) {
+            // rightSum = totalSum - leftSum - arr[i]
+            int rightSum = totalSum - leftSum - arr[i];
+            
+            if (leftSum == rightSum) {
+                equilibriumIndex = i; // 0-based index
+                break;
+            }
+            leftSum += arr[i];
+        }
+
+        if (equilibriumIndex != -1) {
+            System.out.println("Equilibrium Index = " + equilibriumIndex);
+        } else {
+            System.out.println("No Equilibrium Index found");
+        }
+    }
+}
+12.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Ellam numbers ah padikkuthu
+        // Input 2 lines ah irunthalum work aagum
+        // Ex: 2 7 11 15 5
+        //     20
+        ArrayList<Integer> allNumbers = new ArrayList<>();
+        while(sc.hasNextInt()){
+            allNumbers.add(sc.nextInt());
+        }
+        
+        if(allNumbers.size() < 3) return;
+        
+        // Last number thaan Target, munadi irukkura ellam Array
+        int target = allNumbers.get(allNumbers.size() - 1);
+        int[] arr = new int[allNumbers.size() - 1];
+        for(int i=0; i<arr.length; i++) arr[i] = allNumbers.get(i);
+
+        // HashMap use panni O(n) la find pannalam
+        HashSet<Integer> seen = new HashSet<>();
+        boolean found = false;
+        int num1 = 0, num2 = 0;
+
+        for (int num : arr) {
+            int complement = target - num;
+            if (seen.contains(complement)) {
+                num1 = complement;
+                num2 = num;
+                found = true;
+                break;
+            }
+            seen.add(num);
+        }
+
+        if (found) {
+            System.out.println("Pair = " + num1 + " " + num2);
+        } else {
+            System.out.println("No Pair Found");
+        }
+    }
+}
+
+13.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        while(sc.hasNextInt()){
+            list.add(sc.nextInt());
+        }
+        if(list.isEmpty()) return;
+        
+        int[] arr = new int[list.size()];
+        for(int i=0; i<list.size(); i++) arr[i] = list.get(i);
+
+        // Step 1: Candidate ah find pannu
+        int count = 0;
+        int candidate = 0;
+        for (int num : arr) {
+            if (count == 0) {
+                candidate = num;
+            }
+            if (num == candidate) {
+                count++;
+            } else {
+                count--;
+            }
+        }
+
+        // Step 2: Verify pannu - candidate n/2 thadavai varutha nu
+        int freq = 0;
+        for (int num : arr) {
+            if (num == candidate) freq++;
+        }
+
+        if (freq > arr.length / 2) {
+            System.out.println("Majority Element = " + candidate);
+        } else {
+            System.out.println("No Majority Element");
+        }
+    }
+}
+14.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        while(sc.hasNextInt()){
+            list.add(sc.nextInt());
+        }
+        if(list.isEmpty()) return;
+        
+        int[] arr = new int[list.size()];
+        for(int i=0; i<list.size(); i++) arr[i] = list.get(i);
+
+        // Wave ku adjacent ah swap pannu - O(n)
+        for (int i = 0; i < arr.length - 1; i += 2) {
+            int temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+        }
+
+        // Output
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]);
+            if (i < arr.length - 1) System.out.print(" ");
+        }
+    }
+}
+15.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        while(sc.hasNextInt()){
+            list.add(sc.nextInt());
+        }
+        if(list.isEmpty()) return;
+        
+        int[] arr = new int[list.size()];
+        for(int i=0; i<list.size(); i++) arr[i] = list.get(i);
+
+        int maxLen = 1;
+        int currLen = 1;
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] == arr[i - 1] + 1) {
+                // Consecutive ah increase aaguthu
+                currLen++;
+            } else {
+                // Break aayiduchu
+                currLen = 1;
+            }
+            // Max ah update pannu
+            if (currLen > maxLen) {
+                maxLen = currLen;
+            }
+        }
+
+        System.out.println("Length = " + maxLen);
+    }
+}
+16.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        while(sc.hasNextInt()){
+            list.add(sc.nextInt());
+        }
+        if(list.isEmpty()) return;
+        
+        int[] arr = new int[list.size()];
+        for(int i=0; i<list.size(); i++) arr[i] = list.get(i);
+
+        // Already counted elements ah mark panna
+        boolean[] visited = new boolean[arr.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (visited[i]) {
+                continue;
+            }
+            
+            int count = 1;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    visited[j] = true;
+                    count++;
+                }
+            }
+            System.out.println(arr[i] + " -> " + count);
+        }
+    }
+}
+17.import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        ArrayList<Integer> list = new ArrayList<>();
+        while(sc.hasNextInt()){
+            list.add(sc.nextInt());
+        }
+        if(list.isEmpty()) return;
+        
+        int[] arr = new int[list.size()];
+        for(int i=0; i<list.size(); i++) arr[i] = list.get(i);
+        
+        int n = arr.length;
+
+        // Step 1: Correct position la vechukkurom
+        // 1 should be at index 0, 2 at index 1, etc.
+        for (int i = 0; i < n; i++) {
+            while (arr[i] > 0 && arr[i] <= n && arr[arr[i] - 1] != arr[i]) {
+                // Swap arr[i] with arr[arr[i]-1]
+                int temp = arr[arr[i] - 1];
+                arr[arr[i] - 1] = arr[i];
+                arr[i] = temp;
+            }
+        }
+
+        // Step 2: Missing ah find pannu
+        int missing = n + 1;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != i + 1) {
+                missing = i + 1;
+                break;
+            }
+        }
+
+        System.out.println(missing);
+    }
+}
