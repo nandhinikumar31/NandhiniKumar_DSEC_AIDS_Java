@@ -1,0 +1,477 @@
+1.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int[][] a = new int[2][3];
+		for(int i = 0;i < 2;i++) {
+		    for(int j = 0;j < 3;j++) {
+		        a[i][j] = sc.nextInt();
+		    }
+		}
+		for(int i = 0;i < 3;i++){
+		    for(int j = 0;j < 2;j++) {
+		        System.out.print(a[i][j] + " ");
+		    }
+		    System.out.println();
+		}
+		
+	}
+}
+
+2.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int[][] a = new int[3][3];
+		int sum = 0;
+		for(int i = 0;i < 3;i++) {
+		    for(int j = 0;j < 3;j++) {
+		        a[i][j] = sc.nextInt();
+		    }
+		}
+		for(int i = 0;i < 3;i++){
+		    sum = sum + a[i][i];
+		    }
+		    System.out.println("diagonal sum: " + sum);
+		
+		
+	}
+}
+
+3.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int[][] a = new int[3][3];
+		boolean identity = true;
+		
+		for(int i = 0;i < 3;i++) {
+		    for(int j = 0;j < 3;j++) {
+		        a[i][j] = sc.nextInt();
+		    }
+		}
+		for(int i = 0;i < 3;i++){
+		    for(int j = 0;j < 3;j++) {
+		        if(i == j && a[i][j] != 1) {
+		            identity = false;
+		        } else if (i != j && a[i][j] != 0) {
+		            identity = false;
+		        }
+		            
+		            
+		            }
+		            if(identity) {
+		                System.out.println("identity matrix");
+		            } else {
+		                System.out.println("not an identity matrix");
+		            }
+		    }
+	}
+}
+
+4.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int[][] a = new int[2][3];
+		
+		for(int i = 0;i < 2;i++) {
+		    for(int j = 0;j < 3;j++) {
+		        a[i][j] = sc.nextInt();
+		    }
+		}
+		int largest = a[0][0];
+		for(int i = 0;i < 2;i++){
+		    for(int j = 0;j < 3;j++) {
+		        if(a[i][j] > largest) {
+		            largest = a[i][j];
+		        }
+		    }
+		}
+		System.out.println("largest: " + largest);
+		            
+		    
+	}
+}
+5.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String name = sc.nextLine();
+		String rev = " ";
+		for(int i = name.length() - 1;i >= 0;i--) {
+		    rev = rev + name.charAt(i);
+		}
+		System.out.print(rev);
+		    
+	}
+}
+
+6.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		String[] words = s.split(" ");
+		String result = " ";
+		for(int i = 0;i < words.length;i++) {
+		    String word = words[i];
+		    for(int j = word.length() - 1;j >= 0;j--) {
+		        result += word.charAt(j);
+		    }
+		    if(i < words.length - 1) {
+		        result += " ";
+		    }
+		}
+		System.out.println(result);
+	}
+}
+
+problem:
+
+1.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		String result = " ";
+		boolean[] seen = new boolean[256];
+		
+		for(int i = 0;i < str.length();i++) {
+		   char ch = str.charAt(i);
+		   if(!seen[ch]) {
+		       seen[ch] = true;
+		       result = result + ch;
+		   }
+		    
+		}
+		System.out.println(result);
+	}
+}
+
+2.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		int[] freq = new int[256];
+		
+		for(int i = 0;i < str.length();i++) {
+		    freq[str.charAt(i)]++;
+		}
+		
+		boolean found = false;
+		for(int i = 0;i < str.length();i++) {
+		    char ch = str.charAt(i);
+		    if(freq[ch] == 1) {
+		        System.out.println(ch);
+		        found = true;
+		        break;
+		    }
+		    
+		}
+		if(!found) {
+		    System.out.println("no non-repeating character");
+		}
+		
+	}
+}
+3.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		str = str.trim();
+		
+		if(str.isEmpty()) {
+		    System.out.println(0);
+		    return;
+		}
+		String[] words = str.split("\\s+");
+		
+		System.out.println(words.length);
+	}
+}
+
+4.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		
+		int[] freq = new int[256];
+		for(int i = 0;i < str.length();i++) {
+		    freq[str.charAt(i)]++;
+		}
+		char maxChar = str.charAt(0);
+		int maxCount = 0;
+		
+		for(int i = 0;i < str.length();i++) {
+		    char ch = str.charAt(i);
+		    if(freq[ch] > maxCount) {
+		        maxCount = freq[ch];
+		        maxChar = ch;
+		    }
+		}
+		System.out.println("Most frequent character: " + maxChar);
+		System.out.println("Frequency: " + maxCount);
+	}
+}
+5.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		
+		String result = " ";
+		for(int i = 0;i < str.length();i++) {
+		    char ch = str.charAt(i);
+		    
+		    if(ch >= 'A' && ch <= 'Z') {
+		        result = result + (char)(ch + 32);
+		    } else if(ch >= 'a' && ch <= 'z') {
+		        result = result + (char)(ch - 32);
+		    } else {
+		        result = result + ch;
+		    }
+		}
+		System.out.println(result);
+	}
+}
+
+6.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String sentence = sc.nextLine();
+		String oldword = sc.nextLine();
+		String newword = sc.nextLine();
+		
+		String result = sentence.replaceAll("\\b" + oldword + "\\b" , newword);
+		System.out.println(result);
+	}
+}
+
+7.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String sentence = sc.nextLine().trim();
+		
+		if(sentence.isEmpty()) {
+		    System.out.println("No words found");
+		    return;
+		}
+		String[] words = sentence.split("\\s+");
+		String longest = " ";
+		int maxLen = 0;
+		
+		for(String w : words) {
+		    String clean = w.replaceAll("^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$"," ");
+		    if(clean.length() > maxLen) {
+		        maxLen = clean.length();
+		        longest = clean;
+		    }
+		}
+		System.out.println("Longest word: "+longest);
+		System.out.println("Length: "+maxLen);
+		
+	}
+}
+8.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s1 = sc.nextLine();
+		String s2 = sc.nextLine();
+		
+		if(s1.length()  != s2.length()) {
+		    System.out.print("Strings are not rotations");
+		    return;
+		}
+		if(s1.length() == 0 && s2.length() == 0) {
+		    System.out.print("Strings are rotations");
+		    return;
+		}
+		String doubled = s1 + s2;
+		
+		if(doubled.contains(s2)) {
+		    System.out.print("Strings are rotations");
+		    } else {
+		        System.out.print("Strings are not rotations");
+		    }
+
+	}
+}
+
+9.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		if(s.length() == 0) {
+		    System.out.print("");
+		    return;
+		}
+		StringBuilder result = new StringBuilder();
+		int count = 1;
+		
+		for(int i = 1;i < s.length();i++) {
+		    if(s.charAt(i) == s.charAt(i - 1)) {
+		        count++;
+		    } else {
+		        result.append(s.charAt(i - 1)).append(count);
+		        count = 1;
+		    }
+		}
+		result.append(s.charAt(s.length() - 1)).append(count);
+		
+		System.out.print(result.toString());
+
+	}
+}
+
+10.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s1 = sc.nextLine();
+		String s2 = sc.nextLine();
+		
+		int minLen = Math.min(s1.length(),s2.length());
+		StringBuilder prefix = new StringBuilder();
+		
+		for(int i = 0;i < minLen;i++) {
+		    if(s1.charAt(i) == s2.charAt(i)) {
+		        prefix.append(s1.charAt(i));
+		    } else {
+		        break;
+		    }
+		}
+		if(prefix.length() == 0) {
+		    System.out.print("No common prefix");;
+		} else {
+		    System.out.println("common prefix: " + prefix.toString());
+		}
+		
+
+	}
+}
+
+11.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s1 = sc.nextLine();
+		String s2 = sc.nextLine();
+		
+		boolean isEqual = true;
+		
+		if(s1.length() != s2.length()) {
+		    isEqual = false;
+		} else {
+		    for(int i = 0;i < s1.length();i++) {
+		        if(s1.charAt(i) != s2.charAt(i)) {
+		            isEqual = false;
+		            break;
+		        }
+		    }
+		}
+		if(isEqual) {
+		    System.out.println("Strings are equal");
+		} else {
+		    System.out.print("Strings are not equal");
+		}
+		
+
+	}
+}
+
+
+
+
