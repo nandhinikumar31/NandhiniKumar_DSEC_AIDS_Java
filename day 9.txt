@@ -1,0 +1,562 @@
+1.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a sentence: ");
+		String s = sc.nextLine();
+		StringBuilder sb = new StringBuilder(s);
+		for(int i = 0;i < sb.length();i++) {
+		    if(sb.charAt(i) == ' ') {
+		        sb.deleteCharAt(i);
+		        i++;
+		    }
+		}
+		System.out.println(sb);
+
+	}
+}
+
+2.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a word: ");
+		String s = sc.nextLine();
+		StringBuilder sb = new StringBuilder(s);
+		if(sb.length() >= 2) {
+		    sb.deleteCharAt(sb.length() - 1);
+		        sb.deleteCharAt(0);
+		        System.out.println(sb);
+		    } else {
+		        System.out.println("Enter atleast 3 characters");
+		    }
+		
+		
+
+	}
+}
+
+3.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a word: ");
+		String s = sc.nextLine();
+		StringBuilder sb = new StringBuilder(s);
+		if(sb.length() >= 3) {
+		    StringBuilder last = new StringBuilder(
+		        sb.substring(sb.length() - 3)
+		        );
+		        last.reverse();
+		        sb.replace(sb.length() - 3,sb.length(),last.toString());
+		        System.out.println(sb);
+		    } else {
+		        System.out.println("Enter atleast 3 character");
+		    }
+		
+		
+
+	}
+}
+
+4.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		BufferedReader br = new BufferedReader (
+		    new InputStreamReader(System.in)
+		);
+		System.out.println("Enter your name: ");
+		String name = br.readLine();
+		System.out.println("welcome" + name);
+		
+
+	}
+}
+
+5.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		BufferedReader br = new BufferedReader (
+		    new InputStreamReader(System.in)
+		    );
+		System.out.println("Enter the electricity bills: ");
+		int units = Integer.parseInt(br.readLine());
+		double bill;
+		if(units < 0) {
+		    System.out.println("Invalid units");
+		    return;
+		}
+		if(units <= 100) {
+		    bill = units * 2;
+		} else if(units <= 200) {
+		    bill = (100 * 2) + (units - 100) * 3;
+		} else {
+		    bill = (100 * 2) + (100 * 2) + (units - 100) * 5;
+		}
+		System.out.println("electricity bill: Rs " + bill);
+		
+
+	}
+}
+
+6.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		BufferedReader br = new BufferedReader (
+		    new InputStreamReader(System.in)
+		    );
+		System.out.println("Enter starting Number: ");
+		int start = Integer.parseInt(br.readLine());
+		System.out.println("Enter ending Number: ");
+		int end = Integer.parseInt(br.readLine());
+		int even = 0; int odd = 0;
+		for(int i = start;i <= end;i++) {
+		    if(i % 2 == 0) {
+		        even++;
+		    } else {
+		        odd++;
+		    }
+		}
+		System.out.print("Even: " + even + "odd: " + odd);
+		
+
+	}
+}
+
+problems:
+
+1.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = 0;i < s.length();i++) {
+		    char ch = s.charAt(i);
+		    char lower = Character.toLowerCase(ch);
+		    
+		    if(lower == 'a' || lower == 'e' || lower == 'i' || lower == 'o' || lower == 'u') {
+		        continue;
+		    } else {
+		        sb.append(ch);
+		    }
+		}
+		System.out.print(sb.toString());
+
+	}
+}
+
+2.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int n = Integer.parseInt(sc.nextLine());
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = 1;i <= n;i++) {
+		    String name = sc.nextLine();
+		    sb.append(i).append(". ").append(name);
+		    if(i < n) {
+		        sb.append("\n");
+		    }
+		}
+		System.out.print(sb.toString());
+
+	}
+}
+
+3.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = 0;i < s.length();i++) {
+		    char ch = s.charAt(i);
+		    if(Character.isLetterOrDigit(ch)) {
+		        sb.append(ch);
+		    }
+		}
+		System.out.print(sb.toString());
+
+	}
+}
+
+4.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		StringBuilder sb = new StringBuilder(s);
+		
+		for(int i = 0;i < sb.length();i++) {
+		    if(sb.charAt(i) == ' ') {
+		        sb.setCharAt(i,'-');
+		    }
+		    
+		}
+		System.out.print(sb.toString());
+
+	}
+}
+
+5.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		StringBuilder sb = new StringBuilder(s);
+		
+		if(sb.length() > 0) {
+		    char first = Character.toUpperCase(sb.charAt(0));
+		    sb.setCharAt(0,first);
+		    
+		    if(sb.length() > 1) {
+		        char last = Character.toUpperCase(sb.charAt(sb.length() - 1));
+		        sb.setCharAt(sb.length() - 1,last);
+		    }
+		}
+		System.out.print(sb.toString());
+
+	}
+}
+6.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		if(s.length() == 0) {
+		    System.out.print("");
+		    return;
+		}
+		StringBuilder sb = new StringBuilder();
+		sb.append(s.charAt(0));
+		
+		for(int i = 1;i < s.length();i++) {
+		    if(s.charAt(i) != s.charAt(i - 1)) {
+		        sb.append(s.charAt(i));
+		    }
+		}
+	
+		System.out.print(sb.toString());
+
+	}
+}
+
+7.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		StringBuilder letters = new StringBuilder();
+		StringBuilder digits = new StringBuilder();
+		
+		
+		for(int i = 0;i < s.length();i++) {
+		    char ch = s.charAt(i);
+		    if(Character.isDigit(ch)) {
+		        digits.append(ch);
+		    } else  {
+		        letters.append(ch);
+		    }
+		}
+	
+		letters.append(digits);
+		System.out.print(letters.toString());
+
+	}
+}
+
+8.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = 0;i < s.length();i++) {
+		    sb.append(s.charAt(i));
+		    if(i < s.length() - 1) {
+		        sb.append("*");
+		    }
+		}
+	
+		
+		System.out.print(sb.toString());
+
+	}
+}
+
+9.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = 0;i < s.length();i++) {
+		   
+		    if(i % 2 != 0) {
+		        sb.append(s.charAt(i));
+		    }
+		}
+	
+		
+		System.out.print(sb.toString());
+
+	}
+}
+
+10.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		String[] words = s.split(" ");
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = words.length - 1;i >= 0;i--) {
+		   
+		    sb.append(words[i]);
+		    if(i != 0) {
+		        sb.append(" ");
+		    
+		    }
+		}
+	
+		
+		System.out.print(sb.toString());
+
+	}
+}
+
+11.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String sentence = sc.nextLine();
+		String wordsToRemove = sc.nextLine();
+		String[] words = sentence.split(" ");
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = 0;i < words.length;i++) {
+		    if(!words[i].equals(wordsToRemove)) {
+		   
+		    sb.append(words[i]);
+		    if(i < words.length - 1) {
+		        sb.append(" ");
+		    
+		    }
+		}
+		}
+	
+		
+		System.out.print(sb.toString().trim().replaceAll(" +"," "));
+
+	}
+}
+
+12.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		String[] words = s.trim().split("\\s+");
+		StringBuilder sb = new StringBuilder();
+		
+		for(String w : words) {
+		    if(w.length() > 0) {
+		        sb.append(Character.toUpperCase(w.charAt(0)));
+		    }
+		}
+	
+		
+		System.out.print(sb.toString());
+
+	}
+}
+
+13.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String word = sc.nextLine();
+		String prefix = sc.nextLine();
+		String suffix = sc.nextLine();
+		
+		if(word.contains(":")) word = word.split(":")[1].trim();
+		if(prefix.contains(":")) prefix = prefix.split(":")[1].trim();
+		if(suffix.contains(":")) suffix = suffix.split(":")[1].trim();
+		
+		if(prefix.contains("suffix")) {
+		    String[] parts = prefix.split("suffix:");
+		    prefix = parts[0].trim();
+		    suffix = parts[1].trim();
+		}
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(prefix);
+		sb.append(word);
+		sb.append(suffix);
+		
+		System.out.print(sb.toString());
+
+	}
+}
+
+14.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		String s1 = sc.nextLine();
+		String s2 = sc.nextLine();
+		
+		
+		if(s1.contains(":")) s1 = s1.split(":")[1].trim();
+		if(s2.contains(":")) s2 = s2.split(":")[1].trim();
+		StringBuffer sb = new StringBuffer();
+		int minLen = Math.min(s1.length(),s2.length());
+		
+		for(int i = 0;i < minLen;i++) {
+		    sb.append(s1.charAt(i));
+		    sb.append(s2.charAt(i));
+		}
+		if(s1.length() > minLen) {
+		    sb.append(s1.substring(minLen));
+		}
+		if(s2.length() > minLen) {
+		    sb.append(s2.substring(minLen));
+		}
+		
+		
+		System.out.print(sb.toString());
+
+	}
+}
+
+15.import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	  Scanner sc = new Scanner(System.in);
+	  String s = sc.nextLine().trim();
+	  
+	  StringBuffer sb = new StringBuffer(s);
+	  
+	  int hideUpto = sb.length() - 4;
+	  
+	  if(hideUpto < 0) hideUpto = 0;
+	  
+	  for(int i = 0;i < hideUpto;i++) {
+	      sb.setCharAt(i,'X');
+	  }
+	  System.out.print(sb.toString());
+
+	}
+}
